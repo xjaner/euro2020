@@ -25,18 +25,20 @@ SECRET_KEY = '0!(@54a4a^b6xnml(9(oyqh15ws307&l=be7=+y3%lpd0k8khv'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = []
 
 
 # Application definition
 
 INSTALLED_APPS = [
     'django.contrib.admin',
+    'registration',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'joc',
 ]
 
 MIDDLEWARE = [
@@ -127,3 +129,23 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+if os.getenv('DJANGO_ENV') == 'prod':
+    DEBUG = False
+    ALLOWED_HOSTS = ['.disbarat.cat']
+    # ...
+else:
+    DEBUG = True
+    ALLOWED_HOSTS = []
+
+# From 2 scoops of Django
+from unipath import Path
+BASE_DIR = Path(__file__).ancestor(2)
+# MEDIA_ROOT = BASE_DIR.child("media")
+STATIC_ROOT = BASE_DIR.child("static")
+# STATICFILES_DIRS = (
+#     BASE_DIR.child("assets"),
+# )
+LOCALE_PATHS = (
+    BASE_DIR.child("languages"),
+)

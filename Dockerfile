@@ -1,5 +1,9 @@
 FROM python:3
 
+RUN apt-get update && \
+    apt-get install -y  && \
+    apt-get install -y gettext
+#gettext
 # RUN apt-get update && \
 #     apt-get install -y && \
 #     pip install --upgrade pip && \
