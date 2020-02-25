@@ -56,7 +56,7 @@ ROOT_URLCONF = 'euro2020.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -142,10 +142,37 @@ else:
 from unipath import Path
 BASE_DIR = Path(__file__).ancestor(2)
 # MEDIA_ROOT = BASE_DIR.child("media")
-STATIC_ROOT = BASE_DIR.child("static")
-# STATICFILES_DIRS = (
-#     BASE_DIR.child("assets"),
-# )
+# STATIC_ROOT = BASE_DIR.child("static")
+STATICFILES_DIRS = (
+    BASE_DIR.child("static"),
+)
 LOCALE_PATHS = (
     BASE_DIR.child("languages"),
 )
+
+# # django-inspectional-registration
+REGISTRATION_DEFAULT_FROM_EMAIL = 'El Joc del Mundial 2018 <eljocdelmundial@gmail.com>'
+# DEFAULT_FROM_EMAIL = '2016eurocopa@gmail.com'
+# REGISTRATION_REGISTRATION_EMAIL = False
+# REGISTRATION_ACTIVATION_EMAIL = False
+# REGISTRATION_REJECTION_EMAIL = False
+# LOGIN_REDIRECT_URL = '/'
+# LOGIN_URL = '/registration/login'
+
+EQUIPS_PER_GRUP = 4
+NUM_GRUPS = 8
+ID_ADMIN = 1
+
+# http://django-registration-redux.readthedocs.io/en/latest/quickstart.html
+ACCOUNT_ACTIVATION_DAYS = 7  # One-week activation window; you may, of course, use a different vlue
+REGISTRATION_AUTO_LOGIN = True  # Automatically log the user in.
+REGISTRATION_ADMINS = [('Xavier', 'xjaner@gmail.com')]
+LOGIN_REDIRECT_URL = '/'
+LOGIN_URL = '/registration/login'
+
+# EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
+# EMAIL_FILE_PATH = '/tmp/app-messages'  # change this to a proper location
+EMAIL_HOST = "172.18.0.1"
+
+REGISTRATION_FORM = 'joc.forms.RegistrationFormComplete'
+SEND_ACTIVATION_EMAIL = False
