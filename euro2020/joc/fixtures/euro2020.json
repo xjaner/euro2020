@@ -172,8 +172,8 @@
     "model": "joc.Equip",
     "pk": 12,
     "fields": {
-        "nom": "",
-        "bandera": ".png",
+        "nom": "Macedònia del Nord",
+        "bandera": "mac.png",
         "grup": "3"
     }
   },
@@ -199,8 +199,8 @@
     "model": "joc.Equip",
     "pk": 15,
     "fields": {
-        "nom": "",
-        "bandera": ".png",
+        "nom": "Escòcia",
+        "bandera": "esc.png",
         "grup": "4"
     }
   },
@@ -244,8 +244,8 @@
     "model": "joc.Equip",
     "pk": 20,
     "fields": {
-        "nom": "",
-        "bandera": ".png",
+        "nom": "Eslovàquia",
+        "bandera": "esl.png",
         "grup": "5"
     }
   },
@@ -253,8 +253,8 @@
     "model": "joc.Equip",
     "pk": 21,
     "fields": {
-        "nom": "",
-        "bandera": ".png",
+        "nom": "Hongria",
+        "bandera": "hon.png",
         "grup": "6"
     }
   },
@@ -387,7 +387,7 @@
     "fields": {
       "equip1": 1,
       "equip2": 2,
-      "diaihora": "2020-06-12T21:00:00+02:00",
+      "diaihora": "2020-06-11T21:00:00+02:00",
       "estadi": 1,
       "grup": 1
     }
@@ -398,7 +398,7 @@
     "fields": {
       "equip1": 3,
       "equip2": 4,
-      "diaihora": "2020-06-13T15:00:00+02:00",
+      "diaihora": "2020-06-12T15:00:00+02:00",
       "estadi": 2,
       "grup": 1
     }
@@ -409,7 +409,7 @@
     "fields": {
       "equip1": 5,
       "equip2": 6,
-      "diaihora": "2020-06-13T18:00:00+02:00",
+      "diaihora": "2020-06-12T18:00:00+02:00",
       "estadi": 4,
       "grup": 2
     }
@@ -420,7 +420,7 @@
     "fields": {
       "equip1": 7,
       "equip2": 8,
-      "diaihora": "2020-06-13T21:00:00+02:00",
+      "diaihora": "2020-06-12T21:00:00+02:00",
       "estadi": 3,
       "grup": 2
     }
@@ -431,7 +431,7 @@
     "fields": {
       "equip1": 9,
       "equip2": 10,
-      "diaihora": "2020-06-14T21:00:00+02:00",
+      "diaihora": "2020-06-13T21:00:00+02:00",
       "estadi": 5,
       "grup": 3
     }
@@ -442,7 +442,7 @@
     "fields": {
       "equip1": 11,
       "equip2": 12,
-      "diaihora": "2020-06-14T18:00:00+02:00",
+      "diaihora": "2020-06-13T18:00:00+02:00",
       "estadi": 6,
       "grup": 3
     }
@@ -453,7 +453,7 @@
     "fields": {
       "equip1": 13,
       "equip2": 14,
-      "diaihora": "2020-06-14T15:00:00+02:00",
+      "diaihora": "2020-06-13T15:00:00+02:00",
       "estadi": 7,
       "grup": 4
     }
@@ -464,7 +464,7 @@
     "fields": {
       "equip1": 15,
       "equip2": 16,
-      "diaihora": "2020-06-15T15:00:00+02:00",
+      "diaihora": "2020-06-14T15:00:00+02:00",
       "estadi": 8,
       "grup": 4
     }
@@ -475,7 +475,7 @@
     "fields": {
       "equip1": 17,
       "equip2": 18,
-      "diaihora": "2020-06-15T21:00:00+02:00",
+      "diaihora": "2020-06-14T21:00:00+02:00",
       "estadi": 9,
       "grup": 5
     }
@@ -486,7 +486,7 @@
     "fields": {
       "equip1": 19,
       "equip2": 20,
-      "diaihora": "2020-06-15T18:00:00+02:00",
+      "diaihora": "2020-06-14T18:00:00+02:00",
       "estadi": 10,
       "grup": 5
     }
@@ -497,8 +497,8 @@
     "fields": {
       "equip1": 21,
       "equip2": 22,
-      "diaihora": "2020-06-16T21:00:00+02:00",
-      "estadi": 11,
+      "diaihora": "2020-06-15T18:00:00+02:00",
+      "estadi": 12,
       "grup": 6
     }
   },
@@ -508,8 +508,8 @@
     "fields": {
       "equip1": 23,
       "equip2": 24,
-      "diaihora": "2020-06-16T18:00:00+02:00",
-      "estadi": 12,
+      "diaihora": "2020-06-15T21:00:00+02:00",
+      "estadi": 11,
       "grup": 6
     }
   },
@@ -519,7 +519,7 @@
     "fields": {
       "equip1": 1,
       "equip2": 3,
-      "diaihora": "2020-06-17T18:00:00+02:00",
+      "diaihora": "2020-06-16T18:00:00+02:00",
       "estadi": 2,
       "grup": 1
     }
@@ -530,7 +530,7 @@
     "fields": {
       "equip1": 2,
       "equip2": 4,
-      "diaihora": "2020-06-17T21:00:00+02:00",
+      "diaihora": "2020-06-16T21:00:00+02:00",
       "estadi": 1,
       "grup": 1
     }
@@ -541,7 +541,7 @@
     "fields": {
       "equip1": 6,
       "equip2": 8,
-      "diaihora": "2020-06-17T15:00:00+02:00",
+      "diaihora": "2020-06-16T15:00:00+02:00",
       "estadi": 3,
       "grup": 2
     }
@@ -552,7 +552,7 @@
     "fields": {
       "equip1": 5,
       "equip2": 7,
-      "diaihora": "2020-06-18T18:00:00+02:00",
+      "diaihora": "2020-06-17T18:00:00+02:00",
       "estadi": 4,
       "grup": 2
     }
@@ -563,7 +563,7 @@
     "fields": {
       "equip1": 9,
       "equip2": 11,
-      "diaihora": "2020-06-18T21:00:00+02:00",
+      "diaihora": "2020-06-17T21:00:00+02:00",
       "estadi": 5,
       "grup": 3
     }
@@ -574,7 +574,7 @@
     "fields": {
       "equip1": 10,
       "equip2": 12,
-      "diaihora": "2020-06-18T15:00:00+02:00",
+      "diaihora": "2020-06-17T15:00:00+02:00",
       "estadi": 6,
       "grup": 3
     }
@@ -585,7 +585,7 @@
     "fields": {
       "equip1": 14,
       "equip2": 16,
-      "diaihora": "2020-06-19T18:00:00+02:00",
+      "diaihora": "2020-06-18T18:00:00+02:00",
       "estadi": 8,
       "grup": 4
     }
@@ -596,7 +596,7 @@
     "fields": {
       "equip1": 13,
       "equip2": 15,
-      "diaihora": "2020-06-19T21:00:00+02:00",
+      "diaihora": "2020-06-18T21:00:00+02:00",
       "estadi": 7,
       "grup": 4
     }
@@ -607,7 +607,7 @@
     "fields": {
       "equip1": 18,
       "equip2": 20,
-      "diaihora": "2020-06-19T15:00:00+02:00",
+      "diaihora": "2020-06-18T15:00:00+02:00",
       "estadi": 10,
       "grup": 5
     }
@@ -618,7 +618,7 @@
     "fields": {
       "equip1": 17,
       "equip2": 19,
-      "diaihora": "2020-06-20T21:00:00+02:00",
+      "diaihora": "2020-06-19T21:00:00+02:00",
       "estadi": 9,
       "grup": 5
     }
@@ -629,7 +629,7 @@
     "fields": {
       "equip1": 21,
       "equip2": 23,
-      "diaihora": "2020-06-20T15:00:00+02:00",
+      "diaihora": "2020-06-19T15:00:00+02:00",
       "estadi": 12,
       "grup": 6
     }
@@ -639,8 +639,8 @@
     "pk": 24,
     "fields": {
       "equip1": 22,
-      "equip2": 14,
-      "diaihora": "2020-06-20T18:00:00+02:00",
+      "equip2": 24,
+      "diaihora": "2020-06-19T18:00:00+02:00",
       "estadi": 11,
       "grup": 6
     }
@@ -651,7 +651,7 @@
     "fields": {
       "equip1": 4,
       "equip2": 1,
-      "diaihora": "2020-06-21T18:00:00+02:00",
+      "diaihora": "2020-06-20T18:00:00+02:00",
       "estadi": 2,
       "grup": 1
     }
@@ -662,7 +662,7 @@
     "fields": {
       "equip1": 2,
       "equip2": 3,
-      "diaihora": "2020-06-21T18:00:00+02:00",
+      "diaihora": "2020-06-20T18:00:00+02:00",
       "estadi": 1,
       "grup": 1
     }
@@ -673,7 +673,7 @@
     "fields": {
       "equip1": 8,
       "equip2": 5,
-      "diaihora": "2020-06-22T21:00:00+02:00",
+      "diaihora": "2020-06-21T21:00:00+02:00",
       "estadi": 4,
       "grup": 2
     }
@@ -683,8 +683,8 @@
     "pk": 28,
     "fields": {
       "equip1": 6,
-      "equip2": 8,
-      "diaihora": "2020-06-22T21:00:00+02:00",
+      "equip2": 7,
+      "diaihora": "2020-06-21T21:00:00+02:00",
       "estadi": 3,
       "grup": 2
     }
@@ -695,7 +695,7 @@
     "fields": {
       "equip1": 12,
       "equip2": 9,
-      "diaihora": "2020-06-22T18:00:00+02:00",
+      "diaihora": "2020-06-21T18:00:00+02:00",
       "estadi": 5,
       "grup": 3
     }
@@ -706,7 +706,7 @@
     "fields": {
       "equip1": 10,
       "equip2": 11,
-      "diaihora": "2020-06-22T18:00:00+02:00",
+      "diaihora": "2020-06-21T18:00:00+02:00",
       "estadi": 6,
       "grup": 3
     }
@@ -717,7 +717,7 @@
     "fields": {
       "equip1": 14,
       "equip2": 15,
-      "diaihora": "2020-06-23T21:00:00+02:00",
+      "diaihora": "2020-06-22T21:00:00+02:00",
       "estadi": 8,
       "grup": 4
     }
@@ -728,7 +728,7 @@
     "fields": {
       "equip1": 16,
       "equip2": 13,
-      "diaihora": "2020-06-25T21:00:00+02:00",
+      "diaihora": "2020-06-22T21:00:00+02:00",
       "estadi": 7,
       "grup": 4
     }
@@ -739,7 +739,7 @@
     "fields": {
       "equip1": 20,
       "equip2": 17,
-      "diaihora": "2020-06-24T18:00:00+02:00",
+      "diaihora": "2020-06-23T18:00:00+02:00",
       "estadi": 9,
       "grup": 5
     }
@@ -750,7 +750,7 @@
     "fields": {
       "equip1": 18,
       "equip2": 19,
-      "diaihora": "2020-06-24T18:00:00+02:00",
+      "diaihora": "2020-06-23T18:00:00+02:00",
       "estadi": 10,
       "grup": 5
     }
@@ -761,7 +761,7 @@
     "fields": {
       "equip1": 22,
       "equip2": 23,
-      "diaihora": "2020-06-24T21:00:00+02:00",
+      "diaihora": "2020-06-23T21:00:00+02:00",
       "estadi": 12,
       "grup": 6
     }
@@ -772,7 +772,7 @@
     "fields": {
       "equip1": 24,
       "equip2": 21,
-      "diaihora": "2020-06-24T21:00:00+02:00",
+      "diaihora": "2020-06-23T21:00:00+02:00",
       "estadi": 11,
       "grup": 6
     }
@@ -781,7 +781,7 @@
     "model": "joc.Partit",
     "pk": 37,
     "fields": {
-      "diaihora": "2020-06-27T21:00:00+02:00",
+      "diaihora": "2020-06-26T21:00:00+02:00",
       "estadi": 7,
       "grup": 7
     }
@@ -790,7 +790,7 @@
     "model": "joc.Partit",
     "pk": 38,
     "fields": {
-      "diaihora": "2020-06-27T18:00:00+02:00",
+      "diaihora": "2020-06-26T18:00:00+02:00",
       "estadi": 5,
       "grup": 7
     }
@@ -799,7 +799,7 @@
     "model": "joc.Partit",
     "pk": 39,
     "fields": {
-      "diaihora": "2020-06-28T21:00:00+02:00",
+      "diaihora": "2020-06-27T21:00:00+02:00",
       "estadi": 9,
       "grup": 7
     }
@@ -808,7 +808,7 @@
     "model": "joc.Partit",
     "pk": 40,
     "fields": {
-      "diaihora": "2020-06-28T18:00:00+02:00",
+      "diaihora": "2020-06-27T18:00:00+02:00",
       "estadi": 12,
       "grup": 7
     }
@@ -817,7 +817,7 @@
     "model": "joc.Partit",
     "pk": 41,
     "fields": {
-      "diaihora": "2020-06-29T21:00:00+02:00",
+      "diaihora": "2020-06-28T21:00:00+02:00",
       "estadi": 6,
       "grup": 7
     }
@@ -826,7 +826,7 @@
     "model": "joc.Partit",
     "pk": 42,
     "fields": {
-      "diaihora": "2020-06-29T18:00:00+02:00",
+      "diaihora": "2020-06-28T18:00:00+02:00",
       "estadi": 4,
       "grup": 7
     }
@@ -835,7 +835,7 @@
     "model": "joc.Partit",
     "pk": 43,
     "fields": {
-      "diaihora": "2020-06-30T21:00:00+02:00",
+      "diaihora": "2020-06-29T21:00:00+02:00",
       "estadi": 8,
       "grup": 7
     }
@@ -844,7 +844,7 @@
     "model": "joc.Partit",
     "pk": 44,
     "fields": {
-      "diaihora": "2020-06-30T18:00:00+02:00",
+      "diaihora": "2020-06-29T18:00:00+02:00",
       "estadi": 10,
       "grup": 7
     }
@@ -853,7 +853,7 @@
     "model": "joc.Partit",
     "pk": 45,
     "fields": {
-      "diaihora": "2020-07-03T18:00:00+02:00",
+      "diaihora": "2020-07-02T18:00:00+02:00",
       "estadi": 3,
       "grup": 8
     }
@@ -862,7 +862,7 @@
     "model": "joc.Partit",
     "pk": 46,
     "fields": {
-      "diaihora": "2020-07-03T21:00:00+02:00",
+      "diaihora": "2020-07-02T21:00:00+02:00",
       "estadi": 11,
       "grup": 8
     }
@@ -871,7 +871,7 @@
     "model": "joc.Partit",
     "pk": 47,
     "fields": {
-      "diaihora": "2020-07-04T18:00:00+02:00",
+      "diaihora": "2020-07-03T18:00:00+02:00",
       "estadi": 2,
       "grup": 8
     }
@@ -880,7 +880,7 @@
     "model": "joc.Partit",
     "pk": 48,
     "fields": {
-      "diaihora": "2020-07-04T21:00:00+03:00",
+      "diaihora": "2020-07-03T21:00:00+03:00",
       "estadi": 1,
       "grup": 8
     }
@@ -889,7 +889,7 @@
     "model": "joc.Partit",
     "pk": 49,
     "fields": {
-      "diaihora": "2020-07-07T21:00:00+02:00",
+      "diaihora": "2020-07-06T21:00:00+02:00",
       "estadi": 7,
       "grup": 9
     }
@@ -898,7 +898,7 @@
     "model": "joc.Partit",
     "pk": 50,
     "fields": {
-      "diaihora": "2020-07-08T21:00:00+02:00",
+      "diaihora": "2020-07-07T21:00:00+02:00",
       "estadi": 7,
       "grup": 9
     }
@@ -907,7 +907,7 @@
     "model": "joc.Partit",
     "pk": 51,
     "fields": {
-      "diaihora": "2020-07-12T21:00:00+02:00",
+      "diaihora": "2020-07-11T21:00:00+02:00",
       "estadi": 7,
       "grup": 10
     }
