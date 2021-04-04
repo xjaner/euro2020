@@ -1,6 +1,6 @@
 var NUM_TEAMS_PER_GROUP = 4;
-var TORNEIG = 'mundial';
-// var TORNEIG = 'euro';
+// var TORNEIG = 'mundial';
+var TORNEIG = 'euro';
 
 function create2DArray(rows) {
     var arr = [];
@@ -322,7 +322,7 @@ function actualitza_eliminatoria()
                 {
                     empat_seleccionat = 1;
                 }
-            } 
+            }
 
             if (!empat_seleccionat)
             {
@@ -334,7 +334,7 @@ function actualitza_eliminatoria()
             for (var j=0, iLen=formulari.elements[form].length; j<iLen; j++) {
                 formulari.elements[form][j].disabled = true;
                 formulari.elements[form][j].checked = false;
-            } 
+            }
         }
 
     }
