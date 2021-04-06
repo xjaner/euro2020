@@ -7,13 +7,12 @@ from joc.models import Partit, PronosticPartit, PronosticEquipGrup, Equip
 
 GOLS_CHOICES = (('-1', '-'), (0, 0), (1, 1), (2, 2), (3, 3), (4, 4), (5, 5), (6, 6), (7, 7), (8, 8))
 EMPAT_CHOICES = ((1, 1), (2, 2))
-GUARDA_GRUPS = set(['B', 'C', 'D', 'E', 'F', 'G', 'H', 'I'])
-FASE_GRUPS = set(['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'])
-VUITENS = set(['I'])
-QUARTS = set(['J'])
-SEMIS = set(['K'])
-CONSOLACIO = set(['L'])
-FINAL = set(['M'])
+GUARDA_GRUPS = set(['B', 'C', 'D', 'E', 'F', 'G'])
+FASE_GRUPS = set(['A', 'B', 'C', 'D', 'E', 'F'])
+VUITENS = set(['G'])
+QUARTS = set(['H'])
+SEMIS = set(['I'])
+FINAL = set(['J'])
 CREAR_PARTITS = set(['I', 'J', 'K', 'L'])
 COMPROVAR_TERCERS = set([])
 ACABA_PRONOSTIC = set(['N'])
@@ -41,7 +40,7 @@ ULTIM_PARTIT_SEMIS = 62
 ULTIM_PARTIT_CONSOLACIO = 63
 
 
-FUNCIO_ORDRE = lambda x: (x.punts, x.diferencia, x.favor)
+FUNCIO_ORDRE = lambda x: (x.punts, x.diferencia, x.favor)  # TODO: Afegir-hi número de victòries
 
 # Mundial
 EMPARELLAMENTS_VUITENS = {
@@ -76,21 +75,21 @@ EMPARELLAMENT_FINAL = {
 
 # Eurocopa
 POSICIO_TERCERS = {
-    frozenset(['A', 'B', 'C', 'D']): {'WA': 'C', 'WB': 'D', 'WC': 'A', 'WD': 'B'},
-    frozenset(['A', 'B', 'C', 'E']): {'WA': 'C', 'WB': 'A', 'WC': 'B', 'WD': 'E'},
-    frozenset(['A', 'B', 'C', 'F']): {'WA': 'C', 'WB': 'A', 'WC': 'B', 'WD': 'F'},
-    frozenset(['A', 'B', 'D', 'E']): {'WA': 'D', 'WB': 'A', 'WC': 'B', 'WD': 'E'},
-    frozenset(['A', 'B', 'D', 'F']): {'WA': 'D', 'WB': 'A', 'WC': 'B', 'WD': 'F'},
-    frozenset(['A', 'B', 'E', 'F']): {'WA': 'E', 'WB': 'A', 'WC': 'B', 'WD': 'F'},
-    frozenset(['A', 'C', 'D', 'E']): {'WA': 'C', 'WB': 'D', 'WC': 'A', 'WD': 'E'},
-    frozenset(['A', 'C', 'D', 'F']): {'WA': 'C', 'WB': 'D', 'WC': 'A', 'WD': 'F'},
-    frozenset(['A', 'C', 'E', 'F']): {'WA': 'C', 'WB': 'A', 'WC': 'F', 'WD': 'E'},
-    frozenset(['A', 'D', 'E', 'F']): {'WA': 'D', 'WB': 'A', 'WC': 'F', 'WD': 'E'},
-    frozenset(['B', 'C', 'D', 'E']): {'WA': 'C', 'WB': 'D', 'WC': 'B', 'WD': 'E'},
-    frozenset(['B', 'C', 'D', 'F']): {'WA': 'C', 'WB': 'D', 'WC': 'B', 'WD': 'F'},
-    frozenset(['B', 'C', 'E', 'F']): {'WA': 'E', 'WB': 'C', 'WC': 'B', 'WD': 'F'},
-    frozenset(['B', 'D', 'E', 'F']): {'WA': 'E', 'WB': 'D', 'WC': 'B', 'WD': 'F'},
-    frozenset(['C', 'D', 'E', 'F']): {'WA': 'C', 'WB': 'D', 'WC': 'F', 'WD': 'E'},
+    frozenset(['A', 'B', 'C', 'D']): {'WB': 'A', 'WC': 'D', 'WE': 'B', 'WF': 'C'},
+    frozenset(['A', 'B', 'C', 'E']): {'WB': 'A', 'WC': 'E', 'WE': 'B', 'WF': 'C'},
+    frozenset(['A', 'B', 'C', 'F']): {'WB': 'A', 'WC': 'F', 'WE': 'B', 'WF': 'C'},
+    frozenset(['A', 'B', 'D', 'E']): {'WB': 'D', 'WC': 'E', 'WE': 'A', 'WF': 'B'},
+    frozenset(['A', 'B', 'D', 'F']): {'WB': 'D', 'WC': 'F', 'WE': 'A', 'WF': 'B'},
+    frozenset(['A', 'B', 'E', 'F']): {'WB': 'E', 'WC': 'F', 'WE': 'B', 'WF': 'A'},
+    frozenset(['A', 'C', 'D', 'E']): {'WB': 'E', 'WC': 'D', 'WE': 'C', 'WF': 'A'},
+    frozenset(['A', 'C', 'D', 'F']): {'WB': 'F', 'WC': 'D', 'WE': 'C', 'WF': 'A'},
+    frozenset(['A', 'C', 'E', 'F']): {'WB': 'E', 'WC': 'F', 'WE': 'C', 'WF': 'A'},
+    frozenset(['A', 'D', 'E', 'F']): {'WB': 'E', 'WC': 'F', 'WE': 'D', 'WF': 'A'},
+    frozenset(['B', 'C', 'D', 'E']): {'WB': 'E', 'WC': 'D', 'WE': 'B', 'WF': 'C'},
+    frozenset(['B', 'C', 'D', 'F']): {'WB': 'F', 'WC': 'D', 'WE': 'C', 'WF': 'B'},
+    frozenset(['B', 'C', 'E', 'F']): {'WB': 'F', 'WC': 'E', 'WE': 'C', 'WF': 'B'},
+    frozenset(['B', 'D', 'E', 'F']): {'WB': 'F', 'WC': 'E', 'WE': 'D', 'WF': 'B'},
+    frozenset(['C', 'D', 'E', 'F']): {'WB': 'F', 'WC': 'E', 'WE': 'D', 'WF': 'C'},
 }
 
 
@@ -338,13 +337,13 @@ def crea_vuitens_eurocopa(request, jugador, admin=False):
 
 
 def crea_partits(request, jugador, nom_grup, admin=False):
-    if nom_grup == 'I':
-        crea_vuitens_mundial(request, jugador, admin)
-    elif nom_grup == 'J':
+    if nom_grup == 'G':
+        crea_vuitens_eurocopa(request, jugador, admin)
+    elif nom_grup == 'H':
         crea_quarts(request, jugador, admin)
-    elif nom_grup == 'K':
+    elif nom_grup == 'I':
         crea_semis(request, jugador, admin)
-    elif nom_grup == 'L':
+    elif nom_grup == 'J':
         crea_final(request, jugador, admin)
 
 
