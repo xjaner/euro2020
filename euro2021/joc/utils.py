@@ -13,9 +13,9 @@ VUITENS = set(['G'])
 QUARTS = set(['H'])
 SEMIS = set(['I'])
 FINAL = set(['J'])
-CREAR_PARTITS = set(['I', 'J', 'K', 'L'])
-COMPROVAR_TERCERS = set([])
-ACABA_PRONOSTIC = set(['N'])
+CREAR_PARTITS = set(['G', 'H', 'I'])
+COMPROVAR_TERCERS = set(['G'])
+ACABA_PRONOSTIC = set(['K'])
 TEXT_GRUP = {
     'A': 'Grup A',
     'B': 'Grup B',
@@ -23,13 +23,10 @@ TEXT_GRUP = {
     'D': 'Grup D',
     'E': 'Grup E',
     'F': 'Grup F',
-    'G': 'Grup G',
-    'H': 'Grup H',
-    'I': 'Vuitens de final',
-    'J': 'Quarts de final',
-    'K': 'Semifinals',
-    'L': 'Tercer i Quart lloc',
-    'M': 'Final',
+    'G': 'Vuitens de final',
+    'H': 'Quarts de final',
+    'I': 'Semifinals',
+    'J': 'Final',
 }
 
 NUM_EQUIPS = 32
@@ -213,7 +210,7 @@ def crea_vuitens_eurocopa(request, jugador, admin=False):
         PronosticEquipGrup.objects.get(
             jugador=jugador,
             equip__grup__nom='A',
-            posicio=2,
+            posicio=1,
         ).equip.id,
         PronosticEquipGrup.objects.get(
             jugador=jugador,
@@ -225,6 +222,23 @@ def crea_vuitens_eurocopa(request, jugador, admin=False):
 
     get_or_create_and_reset_pronostic_partit(
         38,
+        jugador,
+        PronosticEquipGrup.objects.get(
+            jugador=jugador,
+            equip__grup__nom='A',
+            posicio=2,
+        ).equip.id,
+        PronosticEquipGrup.objects.get(
+            jugador=jugador,
+            equip__grup__nom='B',
+            # equip__grup__nom=emparellaments_tercers['WB'],
+            posicio=2,
+        ).equip.id,
+        admin,
+    )
+
+    get_or_create_and_reset_pronostic_partit(
+        39,
         jugador,
         PronosticEquipGrup.objects.get(
             jugador=jugador,
@@ -240,39 +254,7 @@ def crea_vuitens_eurocopa(request, jugador, admin=False):
     )
 
     get_or_create_and_reset_pronostic_partit(
-        39,
-        jugador,
-        PronosticEquipGrup.objects.get(
-            jugador=jugador,
-            equip__grup__nom='D',
-            posicio=1,
-        ).equip.id,
-        PronosticEquipGrup.objects.get(
-            jugador=jugador,
-            equip__grup__nom=emparellaments_tercers['WD'],
-            posicio=3,
-        ).equip.id,
-        admin,
-    )
-
-    get_or_create_and_reset_pronostic_partit(
         40,
-        jugador,
-        PronosticEquipGrup.objects.get(
-            jugador=jugador,
-            equip__grup__nom='A',
-            posicio=1,
-        ).equip.id,
-        PronosticEquipGrup.objects.get(
-            jugador=jugador,
-            equip__grup__nom=emparellaments_tercers['WA'],
-            posicio=3,
-        ).equip.id,
-        admin,
-    )
-
-    get_or_create_and_reset_pronostic_partit(
-        41,
         jugador,
         PronosticEquipGrup.objects.get(
             jugador=jugador,
@@ -288,12 +270,28 @@ def crea_vuitens_eurocopa(request, jugador, admin=False):
     )
 
     get_or_create_and_reset_pronostic_partit(
-        42,
+        41,
         jugador,
         PronosticEquipGrup.objects.get(
             jugador=jugador,
             equip__grup__nom='F',
             posicio=1,
+        ).equip.id,
+        PronosticEquipGrup.objects.get(
+            jugador=jugador,
+            equip__grup__nom=emparellaments_tercers['WF'],
+            posicio=3,
+        ).equip.id,
+        admin,
+    )
+
+    get_or_create_and_reset_pronostic_partit(
+        42,
+        jugador,
+        PronosticEquipGrup.objects.get(
+            jugador=jugador,
+            equip__grup__nom='D',
+            posicio=2,
         ).equip.id,
         PronosticEquipGrup.objects.get(
             jugador=jugador,
@@ -313,8 +311,8 @@ def crea_vuitens_eurocopa(request, jugador, admin=False):
         ).equip.id,
         PronosticEquipGrup.objects.get(
             jugador=jugador,
-            equip__grup__nom='D',
-            posicio=2,
+            equip__grup__nom=emparellaments_tercers['WE'],
+            posicio=3,
         ).equip.id,
         admin,
     )
@@ -324,8 +322,8 @@ def crea_vuitens_eurocopa(request, jugador, admin=False):
         jugador,
         PronosticEquipGrup.objects.get(
             jugador=jugador,
-            equip__grup__nom='B',
-            posicio=2,
+            equip__grup__nom='D',
+            posicio=1,
         ).equip.id,
         PronosticEquipGrup.objects.get(
             jugador=jugador,
@@ -365,9 +363,8 @@ def comprova_tercers(request, jugador):
         if len(agrupats[-1]) == 2:
             # Empaten els 2 últims tercers, no m'importa! :)
             return None
-    else:
-        # return [grup.values()[0] for grup in agrupats if len(grup.values()[0]) > 1]
-        return sorted(tercers, key=FUNCIO_ORDRE, reverse=True)
+    # return [grup.values()[0] for grup in agrupats if len(grup.values()[0]) > 1]
+    return sorted(tercers, key=FUNCIO_ORDRE, reverse=True)
 
 
 def guarda_classificacio_grup(request, jugador):
