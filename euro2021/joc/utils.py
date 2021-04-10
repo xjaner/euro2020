@@ -13,7 +13,7 @@ VUITENS = set(['G'])
 QUARTS = set(['H'])
 SEMIS = set(['I'])
 FINAL = set(['J'])
-CREAR_PARTITS = set(['G', 'H', 'I'])
+CREAR_PARTITS = set(['G', 'H', 'I', 'J'])
 COMPROVAR_TERCERS = set(['G'])
 ACABA_PRONOSTIC = set(['K'])
 TEXT_GRUP = {
@@ -29,46 +29,45 @@ TEXT_GRUP = {
     'J': 'Final',
 }
 
-NUM_EQUIPS = 32
-ULTIM_PARTIT_GRUPS = 48
-ULTIM_PARTIT_VUITENS = 56
-ULTIM_PARTIT_QUARTS = 60
-ULTIM_PARTIT_SEMIS = 62
-ULTIM_PARTIT_CONSOLACIO = 63
+NUM_EQUIPS = 24
+ULTIM_PARTIT_GRUPS = 36
+ULTIM_PARTIT_VUITENS = 44
+ULTIM_PARTIT_QUARTS = 48
+ULTIM_PARTIT_SEMIS = 50
 
 
 FUNCIO_ORDRE = lambda x: (x.punts, x.diferencia, x.favor)  # TODO: Afegir-hi número de victòries
 
-# Mundial
-EMPARELLAMENTS_VUITENS = {
-    49: ((1, 'A'), (2, 'B')),
-    50: ((1, 'C'), (2, 'D')),
-    51: ((1, 'B'), (2, 'A')),
-    52: ((1, 'D'), (2, 'C')),
-    53: ((1, 'E'), (2, 'F')),
-    54: ((1, 'G'), (2, 'H')),
-    55: ((1, 'F'), (2, 'E')),
-    56: ((1, 'H'), (2, 'G')),
-}
-
-EMPARELLAMENTS_QUARTS = {
-    57: (49, 50),
-    58: (53, 54),
-    59: (51, 52),
-    60: (55, 56),
-}
-
-EMPARELLAMENTS_SEMIS = {
-    61: (57, 58),
-    62: (59, 60),
-}
-
-EMPARELLAMENT_CONSOLACIO = {
-    63: (61, 62),
-}
-EMPARELLAMENT_FINAL = {
-    64: (61, 62),
-}
+# # Mundial
+# EMPARELLAMENTS_VUITENS = {
+#     49: ((1, 'A'), (2, 'B')),
+#     50: ((1, 'C'), (2, 'D')),
+#     51: ((1, 'B'), (2, 'A')),
+#     52: ((1, 'D'), (2, 'C')),
+#     53: ((1, 'E'), (2, 'F')),
+#     54: ((1, 'G'), (2, 'H')),
+#     55: ((1, 'F'), (2, 'E')),
+#     56: ((1, 'H'), (2, 'G')),
+# }
+# 
+# EMPARELLAMENTS_QUARTS = {
+#     57: (49, 50),
+#     58: (53, 54),
+#     59: (51, 52),
+#     60: (55, 56),
+# }
+# 
+# EMPARELLAMENTS_SEMIS = {
+#     61: (57, 58),
+#     62: (59, 60),
+# }
+# 
+# EMPARELLAMENT_CONSOLACIO = {
+#     63: (61, 62),
+# }
+# EMPARELLAMENT_FINAL = {
+#     64: (61, 62),
+# }
 
 # Eurocopa
 POSICIO_TERCERS = {
@@ -87,6 +86,22 @@ POSICIO_TERCERS = {
     frozenset(['B', 'C', 'E', 'F']): {'WB': 'F', 'WC': 'E', 'WE': 'C', 'WF': 'B'},
     frozenset(['B', 'D', 'E', 'F']): {'WB': 'F', 'WC': 'E', 'WE': 'D', 'WF': 'B'},
     frozenset(['C', 'D', 'E', 'F']): {'WB': 'F', 'WC': 'E', 'WE': 'D', 'WF': 'C'},
+}
+
+EMPARELLAMENTS_QUARTS = {
+    45: (41, 42),
+    46: (39, 37),
+    47: (40, 38),
+    48: (43, 44),
+}
+
+EMPARELLAMENTS_SEMIS = {
+    49: (46, 45),
+    50: (48, 47),
+}
+
+EMPARELLAMENT_FINAL = {
+    51: (49, 50),
 }
 
 
@@ -127,22 +142,6 @@ def crea_final(request, jugador, admin=False):
             ).guanyador().id,
             admin,
         )
-
-    for partit_nou, partits_anteriors in EMPARELLAMENT_CONSOLACIO.items():
-        get_or_create_and_reset_pronostic_partit(
-            partit_nou,
-            jugador,
-            PronosticPartit.objects.get(
-                jugador=jugador,
-                partit_id=partits_anteriors[0]
-            ).perdedor().id,
-            PronosticPartit.objects.get(
-                jugador=jugador,
-                partit_id=partits_anteriors[1]
-            ).perdedor().id,
-            admin,
-        )
-
 
 def crea_semis(request, jugador, admin=False):
     for partit_nou, partits_anteriors in EMPARELLAMENTS_SEMIS.items():

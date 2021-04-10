@@ -22,7 +22,7 @@ def consulta_grups(request):
         {
             'grups': grups,
             'height_banderes': 19,
-            'width_banderes': 28,
-            'border_banderes': 1,
+            'width_banderes': 19,
+            'border_banderes': 0,
         }
     )
