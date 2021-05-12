@@ -16,6 +16,7 @@ services:
   web:
     build: .
     volumes:
+      - /static:/static
       - /home/xavier/dev/euro2020/euro2021:/opt/euro2021
         # - /Users/xjaner/dev/euro2021/euro2021:/opt/euro2021
     ports:
