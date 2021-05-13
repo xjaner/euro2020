@@ -27,6 +27,9 @@ services:
       - db
         # command: uwsgi --ini /opt/euro2021/uwsgi.ini
     command: python /opt/euro2021/manage.py runserver 0.0.0.0:8000
+    environment:
+      - "DJANGO_SECRET_KEY=${DJANGO_SECRET_KEY}"
+      - "EURO_GMAIL_APP_PWD=${EURO_GMAIL_APP_PWD}"
 
 volumes:
   pg_data: {}
