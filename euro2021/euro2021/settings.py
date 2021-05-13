@@ -21,7 +21,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '7um95s-f=!9=qkw15b4wzp!ace!86vm8iv9p$8!1vn0+34s39d'
+SECRET_KEY = os.getenv('DJANGO_SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -81,23 +81,23 @@ if os.getenv('DOCKER_CONTAINER'):
 else:
     POSTGRES_HOST = '127.0.0.1'
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
-
 # DATABASES = {
 #     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'euro2021',
-#         'USER': 'postgres',
-#         'PASSWORD': 'postgres',
-#         'HOST': POSTGRES_HOST,
-#         'PORT': '5432',
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
 # }
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'euro2021',
+        'USER': 'postgres',
+        'PASSWORD': 'postgres',
+        'HOST': POSTGRES_HOST,
+        'PORT': '5432',
+    }
+}
 
 
 # Password validation
@@ -159,29 +159,25 @@ LOCALE_PATHS = (
     BASE_DIR.child("languages"),
 )
 
-# # django-inspectional-registration
-REGISTRATION_DEFAULT_FROM_EMAIL = 'El Joc de l\'Eurocopa 2021 <eljocdeleurocopa@gmail.com>'
-# DEFAULT_FROM_EMAIL = '2016eurocopa@gmail.com'
-# REGISTRATION_REGISTRATION_EMAIL = False
-# REGISTRATION_ACTIVATION_EMAIL = False
-# REGISTRATION_REJECTION_EMAIL = False
-# LOGIN_REDIRECT_URL = '/'
-# LOGIN_URL = '/registration/login'
-
 EQUIPS_PER_GRUP = 4
 NUM_GRUPS = 6
 ID_ADMIN = 1
 
 # http://django-registration-redux.readthedocs.io/en/latest/quickstart.html
 ACCOUNT_ACTIVATION_DAYS = 7  # One-week activation window; you may, of course, use a different vlue
-## REGISTRATION_AUTO_LOGIN = True  # Automatically log the user in.
-## REGISTRATION_ADMINS = [('Xavier', 'xjaner@gmail.com')]
-## LOGIN_REDIRECT_URL = '/'
 LOGIN_URL = '/registration/login'
-##
-## # EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
-## # EMAIL_FILE_PATH = '/tmp/app-messages'  # change this to a proper location
-## EMAIL_HOST = "172.18.0.1"
-##
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'eljocdeleurocopa@gmail.com'
+EMAIL_HOST_PASSWORD = os.getenv('EURO_GMAIL_APP_PWD')
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+DEFAULT_FROM_EMAIL = 'El Joc de l\'Eurocopa'
+
 REGISTRATION_FORM = 'joc.forms.RegistrationFormComplete'
 SEND_ACTIVATION_EMAIL = False
+
+## REGISTRATION_ADMINS = [('Xavier', 'xjaner@gmail.com')]
+## REGISTRATION_AUTO_LOGIN = True  # Automatically log the user in.
+## LOGIN_REDIRECT_URL = '/'

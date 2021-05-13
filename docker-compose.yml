@@ -22,6 +22,7 @@ services:
     ports:
       - "8000:8000"
       - "8001:8001"
+      - "587:587"
     depends_on:
       - db
         # command: uwsgi --ini /opt/euro2021/uwsgi.ini
