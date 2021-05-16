@@ -353,8 +353,8 @@
     "model": "joc.Estadi",
     "pk": 9,
     "fields": {
-      "nom": "San Mamés",
-      "ciutat": "Bilbao"
+      "nom": "Estadio La Cartuja",
+      "ciutat": "Sevilla"
     }
   },
   {
@@ -487,7 +487,7 @@
       "equip1": 19,
       "equip2": 20,
       "diaihora": "2021-06-14T18:00:00+02:00",
-      "estadi": 10,
+      "estadi": 3,
       "grup": 5
     }
   },
@@ -608,7 +608,7 @@
       "equip1": 18,
       "equip2": 20,
       "diaihora": "2021-06-18T15:00:00+02:00",
-      "estadi": 10,
+      "estadi": 3,
       "grup": 5
     }
   },
@@ -751,7 +751,7 @@
       "equip1": 18,
       "equip2": 19,
       "diaihora": "2021-06-23T18:00:00+02:00",
-      "estadi": 10,
+      "estadi": 3,
       "grup": 5
     }
   },
@@ -845,7 +845,7 @@
     "pk": 44,
     "fields": {
       "diaihora": "2021-06-29T18:00:00+02:00",
-      "estadi": 10,
+      "estadi": 7,
       "grup": 7
     }
   },
