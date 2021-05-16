@@ -126,7 +126,7 @@ function classifica(resultats, equips, tipus, equips_totals)
         {
             error = 1;
         }
-        else if (equips.length < NUM_TEAMS_PER_GROUP)
+        else if (equips.length < NUM_TEAMS_PER_GROUP || tipus === 'altres')
         {
             error = 1;
         }
