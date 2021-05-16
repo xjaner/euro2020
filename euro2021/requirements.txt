@@ -7,6 +7,7 @@ git+git://github.com/xjaner/django-registration
 pytz==2021.1
 sqlparse==0.4.1
 Unipath==1.1
+uWSGI==2.0.19.1
 
 #### apt-get packages:
 # gettext
