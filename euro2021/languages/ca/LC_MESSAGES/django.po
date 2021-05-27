@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-06 17:18+0000\n"
+"POT-Creation-Date: 2021-05-27 11:39+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,6 +17,10 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: joc/forms.py:10
+msgid "first name"
+msgstr "Nom i cognoms"
 
 #: joc/templates/joc/index.html:4
 msgid "Welcome!"
@@ -36,6 +40,10 @@ msgstr ""
 
 #: joc/templates/joc/index.html:15
 msgid "Llistat d'usuaris"
+msgstr ""
+
+#: joc/templates/joc/index.html:16
+msgid "Puntuacions"
 msgstr ""
 
 #: templates/registration/activate.html:4
@@ -175,16 +183,10 @@ msgid "admin approval"
 msgstr "aprovació de l'administrador"
 
 #: templates/registration/admin_approve_complete_email.html:11
-msgid ""
-"\n"
-"    Your account is now approved. You can \n"
-"    "
-msgstr ""
-"\n"
-"    El teu compte ha estat aprovat. Ara pots \n"
-"    "
+msgid "Your account is now approved. You can "
+msgstr "El teu compte ha estat aprovat. Ara pots "
 
-#: templates/registration/admin_approve_complete_email.html:14
+#: templates/registration/admin_approve_complete_email.html:12
 msgid "log in."
 msgstr "entrar-hi."
 
@@ -251,18 +253,10 @@ msgid "Log in"
 msgstr "Entra"
 
 #: templates/registration/login.html:14
-msgid "Forgot your password?"
-msgstr "No te'n recordes de la contrasenya?"
-
-#: templates/registration/login.html:14
-msgid "Reset it"
-msgstr "Restaura-la"
-
-#: templates/registration/login.html:15
 msgid "Not a member?"
 msgstr "Encara no tens compte?"
 
-#: templates/registration/login.html:15
+#: templates/registration/login.html:14
 msgid "Register"
 msgstr "Registra't"
 
@@ -407,7 +401,7 @@ msgstr "Gràcies per registrar-te. Si els administradors validen el teu compte, 
 msgid "Register for an account"
 msgstr "Registra't"
 
-#: templates/registration/registration_form.html:15
+#: templates/registration/registration_form.html:52
 #: templates/registration/resend_activation_form.html:10
 msgid "Submit"
 msgstr "Envia"
@@ -431,11 +425,14 @@ msgstr ""
 msgid "Resend Activation Email"
 msgstr "Reenvia'm el mail d'activació"
 
-msgid "Is Active?"
-msgstr "Actiu?"
+#~ msgid "Forgot your password?"
+#~ msgstr "No te'n recordes de la contrasenya?"
 
-msgid "Approve users"
-msgstr "Valida els usuaris"
+#~ msgid "Reset it"
+#~ msgstr "Restaura-la"
 
-msgid "first name"
-msgstr "Nom i cognoms"
+#~ msgid "Is Active?"
+#~ msgstr "Actiu?"
+
+#~ msgid "Approve users"
+#~ msgstr "Valida els usuaris"

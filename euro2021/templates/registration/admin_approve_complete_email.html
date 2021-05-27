@@ -8,9 +8,7 @@
 
 <body>
 <p>
-    {% blocktrans %}
-    Your account is now approved. You can
-    {% endblocktrans %}
+    {% blocktrans %}Your account is now approved. You can {% endblocktrans %}
     <a href="http://{{site.domain}}{% url 'auth_login' %}?next=/">{% trans "log in." %}</a>
 </p>
 </body>
