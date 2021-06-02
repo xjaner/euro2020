@@ -8,3 +8,4 @@ local_settings.py
 *.swp
 *.sqlite3
 *.DS_Store
+euro2021/static/admin/
