@@ -22,6 +22,6 @@ urlpatterns = [
     # path('pronostic', views.pronostic, name='pronostic'),
     # # Només després
     path(r'^classificacio$', login_required(ClassificacioView.as_view()), name='classificacio'),
-    url(r'^entrada_admin$', views.entrada_admin, name='entrada_admin'),
-    url(r'^pronostic_admin$', views.pronostic_admin, name='pronostic'),
+    path(r'^entrada_admin$', views.entrada_admin, name='entrada_admin'),
+    path(r'^pronostic_admin$', views.pronostic_admin, name='pronostic'),
 ]
